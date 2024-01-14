@@ -1,5 +1,4 @@
 import PromptForm from "@/components/PromptForm/PromptForm";
-
 const NewPrompt = (): React.ReactElement => {
   return (
     <section className="flex flex-col p-5">
