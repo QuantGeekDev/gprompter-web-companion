@@ -12,3 +12,7 @@ model Prompt {
   title String
   prompt String
 }
+
+generator zod {
+  provider       = "zod-prisma-types"
+}
