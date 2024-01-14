@@ -12,7 +12,7 @@ export function Navbar() {
         <h1 className="text-lg font-bold">GPrompTer Web</h1>
       </Link>
       <nav className="flex items-center space-x-4">
-        <DarkModeToggler />
+        {<DarkModeToggler />}{" "}
         <Link
           className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
           href="/"

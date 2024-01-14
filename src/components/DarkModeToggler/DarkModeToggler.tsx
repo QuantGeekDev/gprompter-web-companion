@@ -4,11 +4,23 @@ import * as React from "react";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 import { Button } from "../ui/button";
+import { useEffect, useState } from "react";
 
-export function DarkModeToggler() {
+export const DarkModeToggler = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { setTheme, theme, systemTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  console.log(systemTheme);
 
+  const currentTheme = theme ? theme : "light";
   const lightThemeToggler = (
     <Button
       className="bg-transparent hover:bg-transparent shadow-none"
@@ -28,4 +40,4 @@ export function DarkModeToggler() {
   );
 
   return currentTheme === "dark" ? lightThemeToggler : darkThemeToggler;
-}
+};
