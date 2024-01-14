@@ -11,7 +11,7 @@ export function DarkModeToggler() {
 
   const lightThemeToggler = (
     <Button
-      className="bg-transparent hover:bg-transparent"
+      className="bg-transparent hover:bg-transparent shadow-none"
       onClick={() => setTheme("light")}
     >
       <SunIcon className="absolute text-white h-[1.2rem] w-[1.2rem] rotate-90 scale-100 transition-all" />

@@ -8,7 +8,9 @@ import { DarkModeToggler } from "../DarkModeToggler/DarkModeToggler";
 export function Navbar() {
   return (
     <header className="flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-800">
-      <h1 className="text-lg font-bold">GPrompTer Web</h1>
+      <Link href="/">
+        <h1 className="text-lg font-bold">GPrompTer Web</h1>
+      </Link>
       <nav className="flex items-center space-x-4">
         <DarkModeToggler />
         <Link

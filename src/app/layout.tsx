@@ -16,9 +16,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <script></script>
-      </head>
       <body className={GeistSans.className}>
         <ThemeProvider
           attribute="class"
